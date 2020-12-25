@@ -199,6 +199,11 @@ div#google_translate_element .goog-te-menu-value {
     margin-right: 4px;
 }
 
+.goog-te-banner-frame {
+    visibility: hidden;
+    display: none;
+}
+
 @media screen and (max-width: 480px) {
     html {
         font-size: 50%;
