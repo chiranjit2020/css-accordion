@@ -5,6 +5,7 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +23,7 @@
 </head>
 
 <body>
+    <div id="google_translate_element"></div>
     <div class="overlay">
         <div class="container">
             <h1>Merry Christmas</h1>
@@ -75,11 +77,25 @@
                         <p>Christmas did not start in Germany, but many of the holiday’s traditions began there, including decorating trees. The celebration of Christmas started in Rome about 336, but it did not become a major Christian festival until the 9th century.</p>
                     </div>
                 </div> <!-- .accord-item -->
+
+
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
+
 </html>
+
 ```
 ```css
 *,
@@ -253,6 +269,41 @@ body {
     }
 }
 
+/*Translate*/
+div#google_translate_element {
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 2%;
+}
+
+div#google_translate_element .goog-te-gadget-simple {
+    border: none;
+    background-color: #ebebeb;
+    border-radius: .5rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .2);
+    border: 1px solid #ccc;
+    padding: .8rem;
+}
+
+div#google_translate_element img.goog-te-gadget-icon {
+    display: none;
+}
+
+div#google_translate_element .goog-te-menu-value {
+    font-family: 'Carter One';
+    text-decoration: none;
+    color: #393939;
+    white-space: nowrap;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.goog-te-banner-frame {
+    visibility: hidden;
+    display: none;
+}
+
 @media screen and (max-width: 480px) {
     html {
         font-size: 50%;
@@ -268,5 +319,7 @@ body {
         padding: 0;
         margin: 0 0 3rem 0;
     }
+
 }
+
 ```
