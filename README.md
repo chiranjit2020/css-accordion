@@ -1,6 +1,6 @@
 # CSS ACCORDION
 ###### Pure CSS accordion
-###### [DEMO](https://chiranjit2020.github.io/css-accordion/index.html)
+###### Here you can see the [DEMO](https://chiranjit2020.github.io/css-accordion/index.html)
 
 ```html
 <!DOCTYPE html>
